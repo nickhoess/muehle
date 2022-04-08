@@ -1,5 +1,5 @@
 name: Scala CI
-
+repo_token: G6FrmwVhotj58pq5mroD7yPQceXPNEtV2
 on:
   push:
     branches: [ user ]

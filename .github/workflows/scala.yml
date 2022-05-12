@@ -33,3 +33,7 @@ jobs:
           curl -s https://codecov.io/bash > .codecov
           chmod +x .codecov
           bash .codecov
+
+- name: Codecov
+  uses: codecov/codecov-action@v3.1.0
+

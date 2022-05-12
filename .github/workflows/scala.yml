@@ -30,9 +30,11 @@ jobs:
           sbt clean test jacoco
       - name: Upload report to Codecov
         run: |
-          curl -s https://codecov.io/bash > .codecov
-          chmod +x .codecov
-          bash .codecov
+          $ProgressPreference = 'SilentlyContinue'
+          Invoke-WebRequest -Uri
+          https://uploader.codecov.io/latest/windows/codecov.exe-Outfile
+          codecov.exe
+          .\codecov.exe
 
 - name: Codecov
   uses: codecov/codecov-action@v3.1.0

@@ -24,3 +24,10 @@ lazy val root = project
     jacocoCoverallsRepoToken := sys.env.get("COVERALLS_REPO_TOKEN")
   )
   .enablePlugins(JacocoCoverallsPlugin)
+
+  jacocoReportSettings := JacocoReportSettings(
+  "Jacoco Coverage Report",
+  None,
+  JacocoThresholds(),
+  Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML), // note XML formatter
+  "utf-8")

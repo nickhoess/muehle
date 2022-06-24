@@ -17,8 +17,6 @@ import aview.gui.MainGui
     val injector = Guice.createInjector(new MillModule)
     val field = injector.getInstance(classOf[FieldInterface])
     val controller = injector.getInstance(classOf[ControllerInterface])
-    //val field = new Field()
-    //val controller = new Controller(field)
     val tui = TUI(controller)
     val gui = MainGui(controller)
     gui.startup(Array())
